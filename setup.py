@@ -114,7 +114,7 @@ class CMakeBuild(build_ext):
             ["cmake", ext.sourcedir] + cmake_args, cwd=self.build_temp
         )
         subprocess.check_call(
-            ["cmake", "--build", ".", "-j", "6"] + build_args, cwd=self.build_temp
+            ["cmake", "--build", "."] + build_args, cwd=self.build_temp
         )
 
 
@@ -122,9 +122,10 @@ class CMakeBuild(build_ext):
 # logic and declaration, and simpler if you include description/version in a file.
 setup(
     name="pyhpx",
-    version="0.0.6",
+    version="0.0.1",
     author="Dimitris Papageorgiou",
-    description="Python support for hpx",
+    author_email="dim_papag@windowslive.com",
+    description="Python porting of hpx",
     long_description="",
     ext_modules=[CMakeExtension("hpx")],
     cmdclass={"build_ext": CMakeBuild},
