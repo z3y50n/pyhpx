@@ -23,3 +23,12 @@ False
 >>> pyhpx.is_heap((3,2,1))
 True
 ```
+
+### Benchmarks
+
+Running `python3 benchmarks/is_heap.py`:
+
+```
+Python is_heap: 0.879698056000052s
+PyHPX is_heap: 1.1873999028466642e-05s
+```
