@@ -20,7 +20,6 @@ jobs:
     - name: Set up Python 3.10
       uses: actions/setup-python@v2
       with:
-        submodules: 'true'
         python-version: "3.10"
     - name: Install dependencies
       run: |
@@ -31,6 +30,8 @@ jobs:
       env:
         CMAKE_BUILD_PARALLEL_LEVEL: 8
         CMAKE_ARGS: "-DHPX_WITH_EXAMPLES=OFF -DHPX_WITH_TESTS=OFF -DHPX_WITH_MALLOC=system"
+      with:
+          submodules: 'true'
       run: |
         python setup.py bdist_wheel
     - name: Install pyhpx
