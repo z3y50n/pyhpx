@@ -14,6 +14,10 @@ To build wheel and install:
 
 `pip3 install dist/pyhpx-0.0.1-cp38-cp38-<platform>.whl`
 
+> HPX needs to be installed with `"system" malloc` by using the `-DHPX_WITH_MALLOC=system` var when building.
+> If installed with `tcmalloc` which is the default, you can use the following command to avoid segmentation errors:
+> `LD_PRELOAD="<path>/<to>/libtcmalloc_minimal.so.4" python3`
+
 ### Examples
 
 ```python

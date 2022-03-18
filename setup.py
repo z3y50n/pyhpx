@@ -127,7 +127,7 @@ setup(
     author_email="dim_papag@windowslive.com",
     description="Python porting of hpx",
     long_description="",
-    ext_modules=[CMakeExtension("hpx")],
+    ext_modules=[CMakeExtension("pyhpx")],
     cmdclass={"build_ext": CMakeBuild},
     zip_safe=False,
     extras_require={"test": ["pytest>=6.0"]},
